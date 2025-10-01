@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/menu.js" defer></script>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/logout.js"></script>
+    <title>Giỏ hàng - Demo</title>
+    <link rel="stylesheet" href="../css/giohang.css">
+    <script src="../js/giohang.js"></script>
+    
+    
+</head>
+<body>
+    <header class="head">
+        <div class="head-left">
+            <img src="../img/logo2.png" alt="anh">
+        </div>
+        <div class="head-mid">
+             <form class="search-form">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button type="submit">Tìm kiếm</button>
+        </form>
+        </div>
+        <div class="head-right">
+          <a href="#" class="icon-box">
+              <i class="fa fa-whatsapp"></i>
+              <span>Tra cứu đơn hàng</span>
+          </a>
+          <a href="../donhang.html" class="icon-box">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="badge" id="cartBadge">0</span>
+              <span>Giỏ hàng</span>
+          </a>
+          <a href="../html/login.html" class="icon-box account">
+            <i class="fa fa-user"></i>
+            <span id="accountName">Tài khoản</span>
+            <ul id="accountMenu" class="account-menu"></ul>
+          </a>
+        </div>
+    </header>
+
+    <div id="menu">
+        <ul>
+          <li><a href="../index.html">🏠 Trang Chủ</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">👕 Quần Áo ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="#">⚽ Bóng Đá</a></li>
+              <li><a href="#">🏀 Bóng Rổ</a></li>
+              <li><a href="#">🏐 Bóng Chuyền</a></li>
+              <li><a href="#">🎾 Cầu Lông</a></li>
+              <li><a href="#">🏓 Bóng Bàn</a></li>
+              <li><a href="#">🥊 Boxing</a></li>
+              <li><a href="#">🏃 Chạy Bộ</a></li>
+              <li><a href="#">🚴 Đạp Xe</a></li>
+              <li><a href="#">🏊 Bơi Lội</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">👟 Giày ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="#">⚽ Bóng Đá</a></li>
+              <li><a href="#">🏀 Bóng Rổ</a></li>
+              <li><a href="#">🏐 Bóng Chuyền</a></li>
+              <li><a href="#">🎾 Cầu Lông</a></li>
+              <li><a href="#">🏓 Bóng Bàn</a></li>
+              <li><a href="#">🥊 Boxing</a></li>
+              <li><a href="#">🏃 Chạy Bộ</a></li>
+              <li><a href="#">🚴 Đạp Xe</a></li>
+              <li><a href="#">🏊 Bơi Lội</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">🎒 Phụ Kiện ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="#">⚽ Bóng Đá</a></li>
+              <li><a href="#">🏀 Bóng Rổ</a></li>
+              <li><a href="#">🏐 Bóng Chuyền</a></li>
+              <li><a href="#">🎾 Cầu Lông</a></li>
+              <li><a href="#">🏓 Bóng Bàn</a></li>
+              <li><a href="#">🥊 Boxing</a></li>
+              <li><a href="#">🏃 Chạy Bộ</a></li>
+              <li><a href="#">🚴 Đạp Xe</a></li>
+              <li><a href="#">🏊 Bơi Lội</a></li>
+            </ul>
+          </li>
+          <li><a href="../html/lienhe.html">📞 Liên Hệ</a></li>
+        </ul>
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1><i class="fa fa-shopping-cart"></i> Giỏ hàng của bạn</h1>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="../index.html">Trang chủ</a> / <span>Giỏ hàng</span>
+        </div>
+
+        <div id="cartContent">
+            <!-- Nội dung giỏ hàng sẽ được load bằng JavaScript -->
+        </div>
+    </div>
+
+    <div id="backtop"><i class="fa fa-solid fa fa-angle-up"></i></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $("#backtop").fadeIn();
+                } else {
+                    $("#backtop").fadeOut();
+                }
+            });
+            $("#backtop").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 400);
+            });
+        });
+    </script>
+
+    <div id="footer">
+        <div id="footer-a">
+            <div id="footer-left">
+                <h1 class="h">Hỗ trợ khách hàng</h1>
+                <ul class="u">
+                    <li class="l"><a href="#">Chính sách vận chuyển</a></li>
+                    <li class="l"><a href="#">Chính sách đổi trả</a></li>
+                    <li class="l"><a href="#">Chính sách khuyến mại</a></li>
+                    <li class="l"><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li class="l"><a href="#">Câu hỏi thường gặp</a></li>
+                    <li class="l"><a href="#">Bảo mật thông tin</a></li>
+                </ul>
+            </div>
+            <div id="footer-mid">
+                <h1 class="h" id="Lienhe">Liên hệ</h1>
+                <ul class="u">
+                    <li class="l">Địa chỉ: Thanh Long Yên Mỹ Hưng Yên</li>
+                    <li class="l">Điện thoại: 0964778132</li>
+                    <li class="l">Email: Truongdzqua171@gmail.com</li>
+                    <li class="l"><a href="https://www.facebook.com/nguyen.van.truong.904709"><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li class="l"><a href="https://www.instagram.com/truong_kutes/"><i class="fa fa-instagram"></i> Instagram</a></li>
+                    <li class="l"><a href="https://www.youtube.com/@NguyenTr%C6%B0%E1%BB%9Dng-i1p"><i class="fa fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+            <div id="footer-right">
+                <h1 class="h">Về chúng tôi</h1>
+                <div class="footer-logo">
+                    <img src="../img/logo2.png" alt="Trường Sport Logo" class="logo">
+                </div>
+                <p>TRƯỜNG SPORT - Cửa hàng thể thao chuyên nghiệp hàng đầu Việt Nam. Chúng tôi cung cấp các sản phẩm thể thao chất lượng cao với giá cả hợp lý.</p>
+            </div>
+            <div id="footer-extra">
+                <h1 class="h">Đăng ký nhận tin</h1>
+                <p>Đăng ký để nhận thông tin về sản phẩm mới và khuyến mãi</p>
+                <div class="footer-signup">
+                    <input type="email" placeholder="Email của bạn" class="footer-email">
+                    <button class="footer-btn">Đăng ký</button>
+                </div>
+                <div class="footer-payment">
+                    <h3>Thanh toán</h3>
+                    <div class="payment-icons">
+                        <i class="fa fa-cc-visa"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TRƯỜNG SPORT</p>
+        </div>
+    </div>
+
+</body>
+</html>
