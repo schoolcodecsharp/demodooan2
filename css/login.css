@@ -6,6 +6,7 @@
     min-height: calc(100vh - 200px);
     background: linear-gradient(45deg, #dee2f2, #e4e2e7);
     padding: 40px 20px;
+    margin: 0;
 }
 
 /* Form styling */
